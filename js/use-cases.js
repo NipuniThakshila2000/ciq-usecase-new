@@ -15,6 +15,9 @@ function setupAnchorLinks() {
       }
 
       event.preventDefault();
+      if (target instanceof HTMLDetailsElement) {
+        target.open = true;
+      }
       window.parent.postMessage(
         {
           source: "ciq-ecc-ccc",
@@ -64,6 +67,12 @@ if ("ResizeObserver" in window) {
   const resizeObserver = new ResizeObserver(postIframeHeight);
   resizeObserver.observe(document.body);
 }
+
+document.querySelectorAll(".accordion-section").forEach((section) => {
+  section.addEventListener("toggle", () => {
+    requestAnimationFrame(postIframeHeight);
+  });
+});
 
 setupAnchorLinks();
 postIframeHeight();

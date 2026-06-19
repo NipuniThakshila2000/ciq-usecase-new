@@ -1275,6 +1275,87 @@ tbody tr:last-child td {
   color: #f0d191;
 }
 
+.accordion-section {
+  padding: 12px 0;
+}
+
+.accordion-section:first-of-type {
+  margin-top: 44px;
+}
+
+.accordion-section > summary {
+  position: relative;
+  display: block;
+  padding: 26px 82px 26px 30px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(246, 248, 243, 0.82)),
+    radial-gradient(circle at 85% 12%, rgba(31, 111, 100, 0.1), transparent 20rem);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.accordion-section > summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-section > summary::marker {
+  content: "";
+}
+
+.accordion-section > summary::after {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+  content: "+";
+  font-size: 1.25rem;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+
+.accordion-section[open] > summary::after {
+  content: "-";
+}
+
+.accordion-section > summary .eyebrow {
+  margin-bottom: 12px;
+}
+
+.accordion-section > summary h2 {
+  max-width: 920px;
+  margin-bottom: 0;
+  font-size: 2.35rem;
+  line-height: 1.08;
+}
+
+.accordion-content {
+  margin-top: 14px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.accordion-content > .section-heading {
+  margin-bottom: 24px;
+}
+
+.accordion-content > .lead {
+  max-width: 900px;
+}
+
+.accordion-content .output-pills {
+  margin-top: 24px;
+}
+
 @media (max-width: 940px) {
   .hero,
   .split,
@@ -1342,6 +1423,36 @@ tbody tr:last-child td {
   h2 {
     font-size: 2rem;
     line-height: 1.04;
+  }
+
+  .accordion-section {
+    padding: 8px 0;
+  }
+
+  .accordion-section:first-of-type {
+    margin-top: 28px;
+  }
+
+  .accordion-section > summary {
+    padding: 22px 70px 22px 22px;
+    border-radius: 20px;
+  }
+
+  .accordion-section > summary::after {
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+
+  .accordion-section > summary h2 {
+    font-size: 1.45rem;
+    line-height: 1.14;
+  }
+
+  .accordion-content {
+    padding: 22px;
+    border-radius: 20px;
   }
 
   .lead,
