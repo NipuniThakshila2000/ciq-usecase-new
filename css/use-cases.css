@@ -951,7 +951,7 @@ tbody tr:last-child td {
   margin-bottom: 34px;
 }
 
-.sandbox-feature {
+.engine-feature {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
   gap: 28px;
@@ -973,7 +973,7 @@ tbody tr:last-child td {
   text-transform: uppercase;
 }
 
-.sandbox-feature h3,
+.engine-feature h3,
 .layer-card h3 {
   margin-bottom: 16px;
   font-family: Georgia, "Times New Roman", serif;
@@ -984,14 +984,14 @@ tbody tr:last-child td {
   text-transform: uppercase;
 }
 
-.sandbox-feature p,
+.engine-feature p,
 .layer-card p,
 .panel-line p {
   color: var(--stone);
   line-height: 1.72;
 }
 
-.sandbox-feature ul {
+.engine-feature ul {
   display: grid;
   gap: 10px;
   margin: 18px 0 0;
@@ -1280,7 +1280,7 @@ tbody tr:last-child td {
   .split,
   .framework-detail,
   .dark-feature,
-  .sandbox-feature {
+  .engine-feature {
     grid-template-columns: 1fr;
   }
 
@@ -1405,7 +1405,7 @@ tbody tr:last-child td {
   .case-card,
   .output-card,
   .benefit-card,
-  .sandbox-feature,
+  .engine-feature,
   .layer-card {
     min-height: auto;
     padding: 24px;
