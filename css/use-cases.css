@@ -689,10 +689,11 @@ tbody tr:last-child td {
 
 .ladder-list li {
   display: grid;
-  grid-template-columns: 58px 1fr;
-  gap: 16px;
-  align-items: center;
-  padding: 18px;
+  grid-template-columns: 52px minmax(0, 1fr);
+  column-gap: 22px;
+  row-gap: 6px;
+  align-items: start;
+  padding: 24px 26px;
   border: 1px solid var(--line);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.76);
@@ -702,6 +703,7 @@ tbody tr:last-child td {
 
 .ladder-list li::before {
   display: grid;
+  grid-row: 1 / 3;
   width: 46px;
   height: 46px;
   place-items: center;
@@ -715,7 +717,8 @@ tbody tr:last-child td {
 
 .ladder-list strong {
   display: block;
-  margin-bottom: 4px;
+  grid-column: 2;
+  margin: 2px 0 0;
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.16rem;
@@ -724,7 +727,9 @@ tbody tr:last-child td {
 }
 
 .ladder-list span {
+  grid-column: 2;
   color: var(--stone);
+  line-height: 1.55;
 }
 
 .moat-grid {
